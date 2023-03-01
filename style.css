@@ -16,6 +16,7 @@
     top: 0;
     left: 0;
     padding: 20px 30px;
+    border: none /* Requirement-2.5 */
 }
 
 p::first-letter{/* Requirement-2.E */
@@ -39,7 +40,7 @@ figure figcaption{ /* Requirement-2.F */
     color: #fefdfd;
     text-decoration: none; /* Requirement-2.2 */
     padding: 10px 14px;
-    display: flex;
+    display: flex; /* Requirement-2.12 */
     align-items: center;
 }
 
@@ -47,23 +48,29 @@ h1,
 nav{ /* Requirement-2.B */
     margin-left: 200px;
     padding: 5px 40px;
-    background-image: linear-gradient(rgba(1,1,1,0.90),rgba(1,1,1,0.90)), url('background.jpeg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: auto auto;
+    height: auto;
+    background-color: black;
 }
 
 main{ /* Requirement-2.A */
     margin-left: 200px; /* Requirement-2.9 */
     height: 100%; /* Requirement-2.10 */
     padding: 5px 40px;
-    background-image: linear-gradient(rgba(1,1,1,0.90),rgba(1,1,1,0.90)), url('background.jpeg');
+    /* Requirement-2.4 */
+    background-image: linear-gradient(rgba(1,1,1,0.90),rgba(1,1,1,0.90)), url('background.png');
     background-repeat: no-repeat; /* Requirement-2.6 */
     background-attachment: fixed;
-    background-size: auto auto;
+    background-size: cover;
+}
+
+img{
+    float: left; /* Requirement-2.11 */
+    height: auto;
+    max-width: 100%;
 }
 
 #imgtext{ /* Requirement-2.D */
+    clear: left; /* Requirement-2.13 */
     color: #fefdfd;
     padding: 10px 0px;
 }
