@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0; /* Requirement-2.6 */
-    box-sizing: 0;
+    box-sizing: content-box;
     font-family: 'Poppins', sans-serif; /* Requirement-2.1 */
     color: #fefdfd; /* Requirement-2.3 */
 }
