@@ -1,76 +1,86 @@
-*{
-    margin: 0;
-    padding: 0; /* Requirement-2.6 */
-    box-sizing: content-box;
-    font-family: 'Poppins', sans-serif; /* Requirement-2.1 */
-    color: #fefdfd; /* Requirement-2.3 */
+#MyTitle{
+     text-align: center;
 }
 
-.sidebar{
-    width: 150px; /* Requirement-2.7 */
-    height: 100%;
-    background: #3a3153 ;
-    position: fixed; /* Requirement-2.15 */
-    z-index: 1; /* Requirement-2.17 */
-    float: left;
-    top: 0;
-    left: 0;
-    padding: 20px 30px;
-    border: none /* Requirement-2.5 */
+.set{
+     background-color: lightgrey;
+     border: 2px solid black;
+     text-align: center;
+     padding: 15px;
+     margin-bottom: 15px;
 }
 
-p::first-letter{/* Requirement-2.E */
-    text-transform: uppercase;
+ul{
+     list-style-type: none;
+     display: inline-block;
+     text-align: right;
+}
+ 
+li{ 
+     background-color: darkgrey;
+     border: 2px solid black;
+     text-align: center;
+     width: 120px;
+     height: 20px;
+     margin: 5px;
+     padding: 5px;
 }
 
-figure figcaption{ /* Requirement-2.F */
-    color: #3a3153;
+li:hover{
+     background-color: white;
 }
 
-.navbutton { /* Requirement-2.C */
-    list-style: none; /* Requirement-2.8 */
-    position: relative;
+#MyFoot{
+     text-align: center;
 }
 
-.navbutton li{
-    padding: 10px 0;
-}
+ 
+@media screen and (min-width: 1100px){
+     body{
+          text-align: center;  
+          width: 100%;
+     }
 
-.navbutton li a{
-    color: #fefdfd;
-    text-decoration: none; /* Requirement-2.2 */
-    padding: 10px 14px;
-    display: flex; /* Requirement-2.12 */
-    align-items: center;
-}
+     .container{
+          flex-direction: wrap;
+          display: flex;
+     }
 
-h1, 
-nav{ /* Requirement-2.B */
-    margin-left: 200px;
-    padding: 5px 40px;
-    height: auto;
-    background-color: black;
-}
+     .set{
+          width: calc(25% - 30px);
+          box-sizing: border-box;
+          display: inline-block;
+          vertical-align: top;
+     }
 
-main{ /* Requirement-2.A */
-    margin-left: 200px; /* Requirement-2.9 */
-    height: 100%; /* Requirement-2.10 */
-    padding: 5px 40px;
-    /* Requirement-2.4 */
-    background-image: linear-gradient(rgba(1,1,1,0.90),rgba(1,1,1,0.90)), url('background.png');
-    background-repeat: no-repeat; /* Requirement-2.6 */
-    background-attachment: fixed;
-    background-size: cover;
-}
+     #Adiv{order: 1;}
+     #Bdiv{order: 4;}
+     #Cdiv{order: 2;}
+     #Ddiv{order: 3;}
+ }
+ 
+@media screen and (min-width: 768px) and (max-width: 1099px){
+     body{
+          text-align: center;
+     }
 
-img{
-    float: left; /* Requirement-2.11 */
-    height: auto;
-    max-width: 100%;
+     .set{
+          width: calc(50% - 30px);
+          box-sizing: border-box;
+          display: inline-block;
+          vertical-align: top;
+     }
 }
+ 
+@media screen and (max-width: 767px){
+     body{
+          text-align: center;
+     }
 
-#imgtext{ /* Requirement-2.D */
-    clear: left; /* Requirement-2.13 */
-    color: #fefdfd;
-    padding: 10px 0px;
+     .set{
+          box-sizing: border-box;
+          display: inline-block;
+          vertical-align: top;
+          width: 100%;
+     }
 }
